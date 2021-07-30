@@ -303,15 +303,19 @@
         const currency = currencies[preferred_currency.toLowerCase()]
         let usd = '';
 
-        if (preferred_currency !== 'USD') {
-            usd = `(${currencies.usd.symbol}${numberFormat(amount * currency.rate * 12)})`;
-        }
 
         if (interval === 'Monthly') {
-            return `${currency.symbol}${numberFormat(amount * 12)} ${usd}`
+            if (preferred_currency !== 'USD') {
+                usd = ` (${currencies.usd.symbol}${numberFormat(amount * currency.rate * 12)})`;
+            }
+
+            return `${currency.symbol}${numberFormat(amount * 12)}${usd}`
+        }
+        if (preferred_currency !== 'USD') {
+            usd = ` (${currencies.usd.symbol}${numberFormat(amount * currency.rate)})`;
         }
 
-        return `${currency.symbol}${numberFormat(amount)} ${usd}`
+        return `${currency.symbol}${numberFormat(amount)}${usd}`
     }
 
     function showReview(event) {

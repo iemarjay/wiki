@@ -20,7 +20,6 @@ class Provider
     {
         $instance = new self();
 
-        $instance->runMigration();
         $instance->loadRoutes();
     }
 
@@ -35,12 +34,5 @@ class Provider
 
         SimpleRouter::setDefaultNamespace('\App\Http\Controllers');
         SimpleRouter::start();
-    }
-
-    protected function runMigration(): void
-    {
-        $db = new Donation;
-
-        $db->migrate();
     }
 }

@@ -12,6 +12,11 @@
         "ext-pdo": "*",
         "ext-json": "*"
     },
+    "scripts": {
+        "post-install-cmd": [
+            "App\\Donation::migrate"
+        ]
+    },
     "autoload": {
         "psr-4": {
             "App\\": "app/",
