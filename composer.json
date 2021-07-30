@@ -1,0 +1,27 @@
+{
+    "name": "iemarjay/wiki",
+    "description": "wiki donation tes",
+    "type": "project",
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "catfan/medoo": "^2.1",
+        "pecee/simple-router": "4.3.7.2",
+        "ext-pdo": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "iemarjay",
+            "email": "emarjay921@gmail.com"
+        }
+    ]
+}

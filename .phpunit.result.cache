@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Tests\\DonationTest::test_guest_can_send_donation":3,"Tests\\DonationTest::test_guest_can_submit_donation_with_good_input":4},"times":{"Tests\\DonationTest::test_guest_can_send_donation":0.013,"Tests\\DonationTest::test_guest_cannot_submit_donation_with_wrong_input":0.014,"Tests\\DonationTest::test_guest_can_submit_donation_with_good_input":0.009}}
